@@ -77,4 +77,20 @@
       max_parallel_downloads={{ ansible_processor_vcpus }}
   become: yes
 
+- name: Disable Tour
+  blockinfile:
+    path: /etc/dconf/db/local.d/00-disable-gnome-tour
+    create: yes
+    block: |
+      [org/gnome/shell]
+      welcome-dialog-last-shown-version='$(rpm -qv gnome-shell | cut -d- -f3)'
+  become: yes
+  
+# Below is not working:
+- name: Disable GNOME Activities overview on login
+  dconf:
+    key: "/org/gnome/shell/extensions/overview-on-login overview-on-login"
+    value: "false"
+  become: yes
+
 ...

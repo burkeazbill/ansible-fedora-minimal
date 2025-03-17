@@ -10,15 +10,15 @@
   tags: base_distro
 
 - name: Build up base distro
-  include: minimal_distro.yml
+  include_tasks: minimal_distro.yml
   tags: base_distro
 
 - name: Performance Tweaks
-  include: system_tweaks.yml
+  include_tasks: system_tweaks.yml
   tags: system_tweaks
 
 - name: Powersaving Tweaks
-  include: powersave.yml
+  include_tasks: powersave.yml
   tags: never,powersave
 
 - name: Install xorg base packages
@@ -58,7 +58,7 @@
   tags: never,lxde
 
 - name: Hardening Tweaks
-  include: hardening.yml
+  include_tasks:  hardening.yml
   tags: never,hardening
 
   ############################# REBOOT #######################################

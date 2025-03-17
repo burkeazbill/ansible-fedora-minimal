@@ -8,9 +8,7 @@ base_packages:
   - "@hardware-support"
   - "@networkmanager-submodules"
   - "@printing"
-  - "@x86-baremetal-tools"
   - ModemManager
-  - NetworkManager-adsl
   - NetworkManager-config-connectivity-fedora
   - NetworkManager-ppp
   - NetworkManager-team
@@ -57,8 +55,7 @@ archive_packages:
   - zstd
 
 codecs_packages:
-  - compat-ffmpeg28
-  - compat-ffmpeg28-devel
+  - ffmpeg
   - egl-utils
   - egl-wayland
   - flac
@@ -108,17 +105,13 @@ gtk_base_packaged:
   - gvfs-smb
   - libappindicator-gtk3
   - libcanberra-gtk2
-  - qgnomeplatform
   - qt-settings
   - qt5-qtxmlpatterns
   - xdg-user-dirs-gtk
 
 gnome_packages:
   - avahi
-  - bolt
-  - chrome-gnome-shell
   - enchant
-  - fros-gnome
   - gdm
   - gnome-color-manager
   - gnome-disk-utility
@@ -128,14 +121,23 @@ gnome_packages:
   - gnome-session-xsession
   - gnome-shell
   - gnome-shell-extension-appindicator
+  - gnome-shell-extension-gpaste
+  - gnome-shell-extension-dash-to-panel
   - gnome-system-monitor
   - gnome-terminal
   - gnome-terminal-nautilus
   - gnome-themes-extra
   - gnome-tweak-tool
+  - remmina
+  - remmina-plugins-rdp
+  - remmina-plugins-secret
+  - remmina-plugins-vnc
   - nautilus
   - nautilus-extensions
+  - seahorse
+  - seahorse-nautilus
   - sushi
+  - terminator
 
 xfce_packages:
   - avahi

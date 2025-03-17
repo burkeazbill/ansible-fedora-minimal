@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-DIR="$(dirname $0)"
+DIR="$(dirname "$0")"
 
 HOST=$1
 shift
